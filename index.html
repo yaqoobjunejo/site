@@ -14,35 +14,56 @@
 	<link id="theme-style" rel="stylesheet" type="text/css" href="">
 <style>
 .btn {
-  background-color: #010203;
-  border: none;
-  color: white;
- padding: 10px 13px; 
-  font-size: 17px;
+  background-color: #e1ad21;
+  padding: 10px 13px; 
+border: none;
+ color: #010203;
+  font-size: 22px;
   cursor: pointer;
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 /* Darker background on mouse-over */
 .btn:hover {
-  background-color: #e1ad21;
+  background-color: #010203;
+  border: none;
+  color: white;
+  font-size: 22px;
   padding: 10px 13px; 
-border: none;
- color: #010203;
-  font-size: 17px;
   cursor: pointer;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #e1ad21;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: black;
+   color: #e1ad21;
+}
+
 </style>
 
 </head>
 <body>
-
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" ></i></button>
 	<section class="s1">
 	<a name="home"></a>
 		<div class="main-container">
 			<div class="greeting-wrapper">
-				<h1>Hi, I'm Yaqoob Junejo</h1>
+				<h1 style="color:#e1ad21">Hi, I'm Yaqoob Junejo</h1>
 			</div>
 
 
@@ -68,7 +89,7 @@ border: none;
 
 				<div class="left-column">
 					<img id="profile_pic" src="images/dp.jpg">
-					<h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
+					<h5 style="text-align: center;line-height: 0; color:#e1ad21">Personalize Theme</h5>
 
 					<div id="theme-options-wrapper">
 						<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
@@ -86,7 +107,7 @@ border: none;
 						<div id="preview">
 							<div id="corner-tl" class="corner"></div>
 							<div id="corner-tr" class="corner"></div>
-							<h3>What I Do</h3>
+							<h3 style="color:#e1ad21">What I Do</h3>
 							<p align="justify">I am a Computer Engineer, passionate about networks and a Cyber Security enthusiast.</p>
 							<div id="corner-br" class="corner"></div>
 							<div id="corner-bl" class="corner"></div>
@@ -96,6 +117,27 @@ border: none;
 			</div>
 		</div>
 	</section>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
 	<section class="s2">
 										<a name="contact"></a>
@@ -103,29 +145,30 @@ border: none;
 
 			<div class="about-wrapper">
 				<div class="about-me">
-					<h4>MORE ABOUT ME</h4>
+					<h4 style="color:#e1ad21">MORE ABOUT ME</h4>
 
 					<p align="justify">I am a Computer Systems Engineering graduate from <a href="https://www.quest.edu.pk/">QUEST Nawabshah</a>. Currently enrolled in MS (Computer Network and Security) at <a href="https://www.nu.edu.pk/">FAST-NUCES Karachi</a>.</p>
 
 					<p align="justify">I am currently working at the IP Ops South Karachi for NOC operations and network security appliance monitoring.</p>
 					<hr>
-					<h4>SAY HELLO AT:</h4>
+					<h4 style="color:#e1ad21">SAY HELLO AT:</h4>
+					<div width="100%">
 					<button class="btn" onclick="location.href='https://www.linkedin.com/in/yaqoobjunejo'" title="LinkIn"><i class="fa fa-linkedin" ></i></button> 
 					<button class="btn" onclick="location.href='https://github.com/yaqoobjunejo'" title="Github"><i class="fa fa-github"></i></button>
+					<button class="btn" onclick="location.href='https://scholar.google.com/citations?user=1TIbJlIAAAAJ&hl=en&oi=ao'" title="Google Scholar"><i class="fa fa-graduation-cap"></i></button>
+					<button class="btn" onclick="location.href='https://join.skype.com/invite/gxAADtQNP7pe'" title="Skype"><i class="fa fa-skype"></i></button>
 					<button class="btn" onclick="location.href='https://www.instagram.com/yaqoob_junejo/'" title="Instagram"><i class="fa fa-instagram"></i></button>
 					<button class="btn" onclick="location.href='https://www.facebook.com/junejoyaqoob'" title="Facebook"><i class="fa fa-facebook-square"></i></button>
 					<!--<button class="btn" onclick="location.href='https://twitter.com/yaqoob_junejo'" title="Twitter"><i class="fa fa-twitter"></i></button>-->
-					<button class="btn" onclick="location.href='https://scholar.google.com/citations?user=1TIbJlIAAAAJ&hl=en&oi=ao'" title="Google Scholar"><i class="fa fa-graduation-cap"></i></button>
-					<button class="btn" onclick="location.href='https://join.skype.com/invite/gxAADtQNP7pe'" title="Skype"><i class="fa fa-skype"></i></button>
 					<!--<button class="btn" onclick="location.href='tel:+923322771888'" title="Phone"><i class="fa fa-phone"></i></button>-->
 					<button class="btn" onclick="location.href='mailto:myaqoobjunejo@hotmail.com'" title="Email"><i class="fa fa-envelope"></i></button>
 					<button class="btn" onclick="location.href='resume.pdf'" title="Download Resume"><i class="fa fa-download "></i></button>
-
+					</div>
 						</div>
 
 				
 				<div class="social-links">
-				<h4>FIND ME AT:</h4>
+				<h4 style="color:#e1ad21">FIND ME AT:</h4>
 				<div class="mapouter" ><div class="gmap_canvas" position="staic"><iframe width="100%" height="275" id="gmap_canvas" src="https://maps.google.com/maps?q=fast%20city%20campus&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:275px;width:100%px;}.gmap_canvas {overflow:hidden;background:none!important;height:275px;width:100%px;}</style></div>
 			
 				</div>
@@ -137,7 +180,7 @@ border: none;
 	<section class="s1">
 											<a name="resume"></a>
 		<div class="main-container">
-			<h3 style="text-align: center;">ACADEMIC BACKGROUND</h3>
+			<h3 style="text-align: center; color:#e1ad21">ACADEMIC BACKGROUND</h3>
 
 			<div class="post-wrapper">
 
@@ -147,7 +190,7 @@ border: none;
 						<div class="post-preview">
 							<h6 class="post-title">M.S (Computer Network & Security)</h6>
 							<p class="post-intro">FAST-National University of Computer and Emerging Sciences Karachi</p>
-							<a href="https://nu.edu.pk/">Visit</a>
+							<a href="https://nu.edu.pk/"><b><i>Visit</i></b></a>
 						</div>
 					</div>
 				</div>
@@ -158,7 +201,7 @@ border: none;
 						<div class="post-preview">
 							<h6 class="post-title">B.E (Computer Systems)</h6>
 							<p class="post-intro" >Quaid-e-Awam University of Engineering, Science & Technology Nawabshah</p>
-							<a href="https://www.quest.edu.pk/">Visit</a>
+							<a href="https://www.quest.edu.pk/" color="black"><b><i>Visit</i></b></a>
 						</div>
 					</div>
 				</div>
@@ -169,7 +212,7 @@ border: none;
 						<div class="post-preview">
 							<h6 class="post-title">H.S.C (Pre-Engineering)</h6>
 							<p class="post-intro">Shaheed Zulfikar Ali Bhutto Institute of Science and Technology (SZABIST) Larkana</p>
-							<a href="https://lrk.szabist.edu.pk/">Visit</a>
+							<a href="https://lrk.szabist.edu.pk/"><b><i>Visit</i></b></a>
 						</div>
 					</div>
 				</div>
@@ -180,7 +223,7 @@ border: none;
 
 	<section class="s2">
 		<div class="main-container">
-			<h3 style="text-align: center;">EMPLOYMENT HISTORY</h3>
+			<h3 style="text-align: center; color:#e1ad21" >EMPLOYMENT HISTORY</h3>
 
 			<div class="post-wrapper">
 
@@ -190,7 +233,7 @@ border: none;
 						<div class="post-preview">
 							<h6 class="post-title">Resident Engineer</h6>
 							<p class="post-intro">NERA Telecommunications PVT. LTD. </br> PTCL-IP Core Operations South, KHI</p>
-							<a href="http://www.nera.net/">Visit</a>
+							<a href="http://www.nera.net/"><b><i>Visit</i></b></a>
 						</div>
 					</div>
 				</div>
@@ -201,7 +244,7 @@ border: none;
 						<div class="post-preview">
 							<h6 class="post-title">Resident Engineer</h6>
 							<p class="post-intro" >A HAMSON PVT. LTD. </br> PTCL-IP Core Operations South, KHI</p>
-							<a href="https://www.ahamson.com/">Visit</a>
+							<a href="https://www.ahamson.com/"><b><i>Visit</i></b></a>
 						</div>
 					</div>
 				</div>
@@ -212,7 +255,7 @@ border: none;
 						<div class="post-preview">
 							<h6 class="post-title">Teaching Assistant</h6>
 							<p class="post-intro">Shaheed Benazir Bhutto University,Shaheed Benazirabad</p>
-							<a href="https://sbbusba.edu.pk">Visit</a>
+							<a href="https://sbbusba.edu.pk"><b><i>Visit</i></b></a>
 						</div>
 					</div>
 				</div>
@@ -223,7 +266,7 @@ border: none;
 
 	<section class="s1">
 		<div class="main-container">
-			<h3 style="text-align: center;">CERTIFICATIONS</h3>
+			<h3 style="text-align: center; color:#e1ad21">CERTIFICATIONS</h3>
 
 			<div class="post-wrapper">
 
@@ -233,7 +276,7 @@ border: none;
 						<div class="post-preview">
 							<h6 class="post-title">NSE 1 Network Security Associate</h6>
 							<p class="post-intro">Fortinet <br> Credential ID: Tcn0LPS0ZS</p>
-							<a href="https://training.fortinet.com/mod/customcert/verify_certificate.php">Verify</a>
+							<a href="https://training.fortinet.com/mod/customcert/<b><i>Verify</i></b>_certificate.php"><b><i>Verify</i></b></a>
 						</div>
 					</div>
 				</div>
@@ -244,7 +287,7 @@ border: none;
 						<div class="post-preview">
 							<h6 class="post-title">NSE 2 Network Security Associate</h6>
 							<p class="post-intro">Fortinet <br> Credential ID: LR6RLsBlJJ</p>
-							<a href="https://training.fortinet.com/mod/customcert/verify_certificate.php">Verify</a>
+							<a href="https://training.fortinet.com/mod/customcert/<b><i>Verify</i></b>_certificate.php"><b><i>Verify</i></b></a>
 						</div>
 					</div>
 				</div>
@@ -255,7 +298,7 @@ border: none;
 						<div class="post-preview">
 							<h6 class="post-title">NSE 3 Network Security Associate</h6>
 							<p class="post-intro">Fortinet <br> Credential ID: PZitB0iyMP</p>
-							<a href="https://training.fortinet.com/mod/customcert/verify_certificate.php">Verify</a>
+							<a href="https://training.fortinet.com/mod/customcert/<b><i>Verify</i></b>_certificate.php"><b><i>Verify</i></b></a>
 						</div>
 					</div>
 				</div>
@@ -266,7 +309,7 @@ border: none;
 						<div class="post-preview">
 							<h6 class="post-title">CNSS - Certified Network Security Specialist</h6>
 							<p class="post-intro">ICSI-International Cyber Security Institute, UK <br> Credential ID: 17391345</p>
-							<a href="https://www.credential.net/d461cd92-22bf-4078-a31c-41bc050ef609">Verify</a>
+							<a href="https://www.credential.net/d461cd92-22bf-4078-a31c-41bc050ef609"><b><i>Verify</i></b></a>
 						</div>
 					</div>
 				</div>
@@ -278,7 +321,7 @@ border: none;
 						<div class="post-preview">
 							<h6 class="post-title">Microsoft Office Specialist (MOS) <br> Microsoft Office Word 2013</h6>
 							<p class="post-intro">Microsoft INC.  <br> <br> Credential ID: xF6c-sFwB<br> </p>
-							<a href="https://portal.certiport.com/Portal/Pages/CredentialVerification.aspx">Verify</a>
+							<a href="https://portal.certiport.com/Portal/Pages/CredentialVerification.aspx"><b><i>Verify</i></b></a>
 						</div>
 					</div>
 				</div>
@@ -289,7 +332,7 @@ border: none;
 	<section class="s2">
 <footer class="site-footer">
     <div class="content">
-      <p align="center">Modified with <i class="fa fa-heart"></i> by <b><strong class="author">Yaqoob Junejo</strong></b>, credits to <b><strong>divanov11</strong></b>.</p>
+      <p align="center">Design modified with <i class="fa fa-heart"></i> by <b><strong class="author">Yaqoob Junejo</strong></b></p>
     </div>
   </footer>
   	</section> 
