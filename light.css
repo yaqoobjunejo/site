@@ -7,7 +7,7 @@
 	--mainText:black;
 	--secondaryText:#4b5156;
 
-	--themeDotBorder:#24292e;
+	--themeDotBorder:#e1ad21;
 
 	--previewBg:rgb(251, 249, 243, 0.8);
 	--previewShadow:#f0ead6;
@@ -117,7 +117,7 @@ h6 { font-size: 16px;}
 }
 
 #navigation a{
-	color:var(--mainText);
+	color:#e1ad21;
 }
 
 
@@ -260,8 +260,8 @@ h6 { font-size: 16px;}
 	width:7px;
 	height: 7px;
 	border-radius: 50%;
-	border:1.5px solid #17a2b8;
-	background-color: #fff;
+	border:1.5px solid #e1ad21;
+	background-color: #e1ad21;
 	position: absolute;
 	 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
