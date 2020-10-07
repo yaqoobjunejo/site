@@ -162,6 +162,11 @@ h6 { font-size: 16px;}
 
 }
 
+.browser-dot:hover{
+	border-width: 3px;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 10px 0 rgba(0,0,0,0.19);
+}
+
 
 .left-column{
 	grid-area: left-column;
